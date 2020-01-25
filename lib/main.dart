@@ -73,7 +73,7 @@ class _HomePageState extends State<HomePage> {
 
   save() async {
     var prefs = await SharedPreferences.getInstance();
-    await prefs.setString('data', jsonDecode('widget.items'));
+    await prefs.setString('data', jsonEncode(widget.items));
   }
 
   _HomePageState() {
