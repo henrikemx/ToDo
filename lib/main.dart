@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class extends StatefulWidget {
+class HomePage extends StatefulWidget {
   var items = new List<Item>();
 
   HomePage() {
@@ -73,7 +73,7 @@ class _HomePageState extends State<HomePage> {
 
   save() async {
     var prefs = await SharedPreferences.getInstance();
-    await prefs.setString('data', jsonDecode(widget.items));
+    await prefs.setString('data', jsonDecode('widget.items'));
   }
 
   _HomePageState() {
